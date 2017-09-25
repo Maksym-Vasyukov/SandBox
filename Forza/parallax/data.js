@@ -1,5 +1,6 @@
 var dataset = {
-  "title": "BVB Fanclub Forza Borussia 1996"
+  "title": "BVB Fanclub Forza Borussia 1996",
+
 }
 
 for (var key in dataset) {
@@ -8,3 +9,7 @@ for (var key in dataset) {
     document.getElementById(key).innerHTML = dataset[key];
   }
 }
+
+
+
+document.getElementById("home").getElementById("headerText").innerHTML = "BVB Fanclub Forza Borussia 1996"
