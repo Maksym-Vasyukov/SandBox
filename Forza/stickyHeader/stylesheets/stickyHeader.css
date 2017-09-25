@@ -5,7 +5,7 @@ header {
 .header-banner {
   background-color: #222;
   text-decoration-color: #000;
-  background-image: url("../assets/stadion.jpg");
+  background-image: url("../../assets/stadion.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
