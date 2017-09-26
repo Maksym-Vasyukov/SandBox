@@ -4,7 +4,10 @@
 
 <head>
   <link rel="stylesheet" href="stylesheets/style.css" />
+
   <script src="scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <!-- <script src="data.js"></script> -->
 
   <meta charset="UTF-8">
@@ -13,6 +16,26 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
+<script>
+$(document).ready(function(){
+  $('#portfolio #galeryContainer #galery').hide();
+
+  $('#portfolio #galeryContainer #galeryLink').click(function(){
+      $(this).next('#galery').slideToggle(200);
+  });
+});
+</script>
+
+<style>
+#flip:hover {
+  cursor: pointer;
+}
+
+#panel {
+    display: none;
+}
+</style>
 
 <body>
 
@@ -56,7 +79,10 @@
       die Gründung des Harten Kern´s in Mailand zurückzuführen.</p>
 
     <div class="w3-row">
+
+
       <p><b>Wie alles begann</b></p><br>
+
       <div class="w3-col m4">
         <img src="../assets/aboutUs/bild1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
       </div>
@@ -66,6 +92,8 @@
       <div class="w3-col m4">
         <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
       </div>
+
+
 
       <!-- Hide this text on small devices -->
       <!-- <div class="w3-col m6 w3-hide-small w3-padding-large">
@@ -119,8 +147,39 @@
 
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center">MY WORK</h3>
-    <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+    <h3 class="w3-center">Bildergalerie</h3>
+    <p class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></p><br>
+
+    <div id="galeryContainer">
+      <div id="galeryLink">Sommerfest</div>
+      <div id="galery">
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+      </div>
+
+      <div id="galeryLink">Sommerfest2</div>
+      <div id="galery">
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+        <div class="w3-col m4">
+          <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+        </div>
+      </div>
+    </div>
+
+
+
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
