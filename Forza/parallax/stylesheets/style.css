@@ -38,7 +38,7 @@ body, html {
 /* Third image (Contact) */
 
 .bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
+  background-image: url("../../assets/bvb-flag.jpg");
   min-height: 400px;
 }
 
