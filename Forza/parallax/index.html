@@ -26,6 +26,19 @@ $(document).ready(function(){
       $(this).next('#galery').slideToggle(200);
   });
 });
+
+$(document).ready(function(){
+  $('#portfolio #galeryContainer #sf98').hide();
+  $('#portfolio #galeryContainer #sf99').hide();
+  var allNodes = document.getElementById("galeryContainer").childNodes;
+
+  $('#portfolio .scrollmenu p').click(function(){
+      var addressValue = $(this).attr("link");
+
+      $("#portfolio #galeryContainer").find(addressValue).slideToggle(200);
+
+  });
+});
 </script>
 
 <style>
@@ -150,9 +163,56 @@ $(document).ready(function(){
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
     <p class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></p><br>
 
+    <div class="scrollmenu">
+      <p link="#sf98">Home</p>
+      <p link="#sf99">99</p>
+    </div>
+
     <div id="galeryContainer">
-      <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px; margin-bottom:5px" id="galeryLink">Sommerfest 1998</button>
-      <div id="galery">
+
+      <div id="sf98" >
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div id="sf99" >
 
         <div class="w3-row-padding w3-center">
           <div class="w3-col m3">
