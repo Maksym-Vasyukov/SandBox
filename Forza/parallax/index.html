@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<title>BVB Fanclub Forza Borussia 1996</title>
+
+<head>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="stylesheets/w3.css">
+
+  <script src="scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- <script src="data.js"></script> -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script>
+$(document).ready(function(){
+  $('#portfolio #galeryContainer #galery').hide();
+
+  $('#portfolio #galeryContainer #galeryLink').click(function(){
+      $(this).next('#galery').slideToggle(200);
+  });
+});
+
+$(document).ready(function(){
+  $('#portfolio #galeryContainer #sf98').hide();
+  $('#portfolio #galeryContainer #sf99').hide();
+  var allNodes = document.getElementById("galeryContainer").childNodes;
+
+  $('#portfolio .scrollmenu p').click(function(){
+      var addressValue = $(this).attr("link");
+
+      $("#portfolio #galeryContainer").find(addressValue).slideToggle(200);
+
+  });
+});
+</script>
+
+<style>
+#flip:hover {
+  cursor: pointer;
+}
+
+#panel {
+    display: none;
+}
+</style>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Über Uns</a>
+      <a href="#news" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o "></i> News</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Bildergalerie</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Kontakt</a>
+      <a href="#shop" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i> Fanclub-Artikel</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-user"></i> Über Uns</a>
+      <a href="#news" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper-o "></i> News</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> Bildergalerie</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> Kontakt</a>
+      <a href="#shop" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-shopping-cart"></i> Fanclub-Artikel</a>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" >BVB Fanclub <span class="w3-hide-small">Forza Borussia 1996</span> </span>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Über Uns</h3>
+    <p class="w3-center"><em>Historie und Vereinsmeierei</em></p>
+    <p>Der damals „harte Kern“ des Fanclubs (12 Mitglieder aus dem Kreis Unna, Dortmund und Warstein) lernte sich 1994 in Mailand anlässlich der Uefa-Cup-Begegnung Inter Mailand : Borussia Dortmund kennen. Das gesellige Beisammensein und die Verbundenheit
+      zum BVB bewog uns damals dazu, eine inoffizielle Fangemeinschaft zu gründen. Schnell stellte sich heraus, dass diese lustige Truppe immer größer wurde und somit 1996 als offizieller Fanclub anerkannt wurde. Der Name Forza-Borussia 1996 ist auf
+      die Gründung des Harten Kern´s in Mailand zurückzuführen.</p>
+
+    <div class="w3-row">
+
+
+      <p><b>Wie alles begann</b></p><br>
+
+      <div class="w3-col m4">
+        <img src="../assets/aboutUs/bild1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      </div>
+      <div class="w3-col m4">
+        <img src="../assets/aboutUs/bild2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      </div>
+      <div class="w3-col m4">
+        <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      </div>
+
+
+
+      <!-- Hide this text on small devices -->
+      <!-- <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div> -->
+    </div>
+
+    <!-- BARS -->
+
+    <!-- <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+    <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+    </div> -->
+
+  </div>
+
+
+  <!-- THICK BAR -->
+  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">14+</span><br> Partners
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">55+</span><br> Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">89+</span><br> Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">150+</span><br> Meetings
+    </div>
+  </div> -->
+
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" >Bildergalerie</span>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <p class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></p><br>
+
+    <div class="scrollmenu">
+      <p link="#sf98">Home</p>
+      <p link="#sf99">99</p>
+    </div>
+
+    <div id="galeryContainer">
+
+      <div id="sf98" >
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div id="sf99" >
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+
+          <div class="w3-col m3">
+              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <!-- Add Google Maps -->
+        <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+</body>
+
+</html>
