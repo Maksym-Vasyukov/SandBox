@@ -20,16 +20,6 @@
 
 
 
-<style>
-#flip:hover {
-  cursor: pointer;
-}
-
-#panel {
-    display: none;
-}
-</style>
-
 <body>
 
   <!-- Navbar (sit on top) -->
@@ -42,6 +32,7 @@
       <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Über Uns</a>
       <a href="#news" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o "></i> News</a>
       <a href="#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Bildergalerie</a>
+      <a href="#stats" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i> Statistiken</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Kontakt</a>
       <a href="#shop" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i> Fanclub-Artikel</a>
     </div>
@@ -51,6 +42,7 @@
       <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-user"></i> Über Uns</a>
       <a href="#news" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper-o "></i> News</a>
       <a href="#gallery" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> Bildergalerie</a>
+      <a href="#stats" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> Statistiken</a>
       <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> Kontakt</a>
       <a href="#shop" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-shopping-cart"></i> Fanclub-Artikel</a>
     </div>
@@ -116,18 +108,16 @@
 
 
   <!-- Second Parallax Image with Portfolio Text -->
-  <div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="bgimg-2 w3-display-container w3-opacity-min" id="gallery">
     <div class="w3-display-middle">
       <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" >Bildergalerie</span>
     </div>
   </div>
 
   <!-- Container (Portfolio Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="gallery">
+  <div class="w3-content w3-container w3-padding-64" >
     <div class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></div>
   </div>
-
-
 
   <div style="padding-bottom:40px;">
     <div class="scrollmenu" id="scrollmenu">
@@ -145,6 +135,116 @@
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
       <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-6 w3-display-container w3-opacity-min" id="stats">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Statistiken</span>
+    </div>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64">
+    <div class="w3-border">
+      <div class="w3-bar w3-theme">
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Erfolge')">Erfolge</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Heimsiege')">Die höchsten Heimsiege</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Auswaerts')">Die höchsten Auswärtssiege</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Heimniederlagen')">Die höchsten Heimniederlagen</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Auswaertsniederlagen')">Die höchsten Auswärtsniederlagen</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Spiele')">Die meisten Spiele</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Tore')">Die meisten Tore</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Elfmeter')">Elfmeter</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openField(event,'Top-Platzverweise')">Platzverweise</button>
+      </div>
+
+      <div id="Erfolge" class="w3-container stat w3-animate-opacity" style="">
+        <h2>Erfolge</h2>
+        <ul style="list-style-type:none">
+          <li>Deutscher Meister 1955/56</li>
+          <li>Deutscher Meister 1956/57</li>
+          <li>Deutscher Meister 1962/63</li>
+          <li>Deutscher Meister 1994/95</li>
+          <li>Deutscher Meister 1995/96</li>
+          <li>Deutscher Meister 2001/02</li>
+          <li>Deutscher Meister 2010/11</li>
+          <li>Deutscher Meister 2011/12</li>
+          <li>Deutscher Pokalsieger 1964/65</li>
+          <li>Deutscher Pokalsieger 1988/89</li>
+          <li>Deutscher Pokalsieger 2011/2012</li>
+          <li>Dt. Superpokalsieger 1988/89</li>
+          <li>Dt. Superpokalsieger 1994/95</li>
+          <li>Dt. Superpokalsieger 1995/96</li>
+          <li>Europapokalsieger (Pokalsieger) 1965/66</li>
+          <li>Europapokalsieger (Champions League) 1996/97</li>
+          <li>Weltpokalsieger 1996/97</li>
+        </ul>
+      </div>
+
+      <div id="Top-Heimsiege" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Die höchsten Heimsiege</h2>
+        <ul style="list-style-type:none">
+          <li>11:1 gegen Arminia Bielefeld am 06.11.82</li>
+          <li>7:0 gegen FC Schalke 04 am 26.02.66</li>
+          <li>7:0 gegen Hamburger SV am 20.05.67</li>
+          <li>7:0 gegen Blau-Weiß 90 Berlin am 26.09.86</li>
+        </ul>
+      </div>
+
+      <div id="Top-Auswaerts" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Die höchsten Auswärtssiege</h2>
+        <ul style="list-style-type:none">
+          <li>6:1 gegen SpVgg Greuther Fürth am 13.04.13</li>
+          <li>6:1 gegen 1. FC Köln am 25.03.12</li>
+          <li>6:1 gegen 1. FC Köln am 23.08.94</li>
+          <li>5:0 gegen Werder Bremen am 19.01.13</li>
+          <li>5:0 gegen VfB Stuttgart am 16.03.96</li>
+          <li>5:0 gegen Fortuna Düsseldorf am 07.01.67</li>
+        </ul>
+      </div>
+
+      <div id="Top-Heimniederlagen" class="w3-container stat w3-animate-opacity" style="display: none">
+        <h2>Die höchsten Heimniederlagen</h2>
+        <ul style="list-style-type:none">
+          <li>1:5 gegen Bayern München am 12.09.09</li>
+          <li>1:5 gegen Werder Bremen am 04.09.71</li>
+          <li>0:4 gegen VfB Stuttgart am 14.05.93</li>
+          <li>0:4 gegen 1. FC Köln am 29.10.88</li>
+          <li>0:4 gegen VfB Stuttgart am 12.11.71</li>
+        </ul>
+      </div>
+
+      <div id="Top-Auswaertsniederlagen" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Die höchsten Auswärtsniederlagen</h2>
+        <ul style="list-style-type:none">
+          <li>0:12 gegen Borussia Mönchengladbach am 29.04.78</li>
+          <li>1:11 gegen Bayern München am 27.11.71</li>
+          <li>1:9 gegen Hertha BSC Berlin am 18.04.70</li>
+        </ul>
+      </div>
+
+      <div id="Top-Spiele" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Die meisten Spiele</h2>
+        <p>Zorc (463), Weidenfeller (332), Dede (322), Reuter (307), Ricken (301), Kutowski (288), Kehl (267), Huber (255), Klos (254), Immel (247), Kurrat (247), Wörns (240), Held (230), Möller (228) Burgsmüller (224), Chapuisat (218) Lusch (332)</p>
+      </div>
+
+      <div id="Top-Tore" class="w3-container stat w3-animate-opacity" style="display: none">
+        <h2>Die meisten Tore</h2>
+        <p>Burgsmüller (135), Zorc (131), Emmerich (115), Chapuisat (102), Lewandowski (74), Möller (71), Wosab (61), Koller (59), Ricken (49), Ewerthon (47), Mill (47) Held (44), Konietzka (42), Herrlich (40), Dickel (40), Barios (39), Reus (37)</p>
+      </div>
+
+      <div id="Top-Elfmeter" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Elfmeter</h2>
+        <p>Zorc (49), Huber (18), Emmerich (9), Amoroso (9), Frei (8), Raducanu (6), Reus (4), Lewandowski (4), Möller (4), Paul (4), Rummenigge (4), Blaszczykowski (4), Ewerthon (4), Schütz (4)</p>
+      </div>
+
+      <div id="Top-Platzverweise" class="w3-container stat w3-animate-opacity" style="display: none;">
+        <h2>Platzverweise</h2>
+        <p>Lehmann (4), Dede (4), Zorc (3), Möller (3), Reuter (3), Rosicky (3), Wörns (3), Barbarez (3), Schmidt (3), Schulz (3), Kutowski (2), Klotz (2), Mill (2), Kehl (2), Evanilson (2), Reinhardt (2), Sammer (2), Kovac (2), Brzenska (2), Frings (2), Heinrich (2)</p>
+      </div>
+
+
     </div>
   </div>
 

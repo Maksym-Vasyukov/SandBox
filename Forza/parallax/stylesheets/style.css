@@ -11,7 +11,7 @@ body, html {
 
 /* Create a Parallax Effect */
 
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body, html {
 /* Third image (Contact) */
 
 .bgimg-3 {
-  background-image: url("../../assets/bvb-flag.jpg");
+  background-image: url("../../assets/contact.jpg");
   min-height: 400px;
 }
 
@@ -49,6 +49,11 @@ body, html {
 
 .bgimg-5 {
   background-image: url("../../assets/news2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-6 {
+  background-image: url("../../assets/stats.jpg");
   min-height: 400px;
 }
 
@@ -169,3 +174,26 @@ div.scrollmenu a:hover {
   font-size: 16px;
   padding: 16px 32px;
 }
+
+.w3-theme-l5 {color:#000 !important; background-color:#f0f0f0 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#cccccc !important}
+.w3-theme-l3 {color:#fff !important; background-color:#999999 !important}
+.w3-theme-l2 {color:#fff !important; background-color:#666666 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#333333 !important}
+.w3-theme-d1 {color:#fff !important; background-color:#000000 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#000000 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#000000 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#000000 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#000000 !important}
+
+.w3-theme-light {color:#000 !important; background-color:#f0f0f0 !important}
+.w3-theme-dark {color:#fff !important; background-color:#000000 !important}
+.w3-theme-action {color:#fff !important; background-color:#000000 !important}
+
+.w3-theme {color:#fff !important; background-color:#000000 !important}
+.w3-text-theme {color:#000000 !important}
+.w3-border-theme {border-color:#000000 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#000000 !important}
+.w3-hover-text-theme:hover {color:#000000 !important}
+.w3-hover-border-theme:hover {border-color:#000000 !important}
