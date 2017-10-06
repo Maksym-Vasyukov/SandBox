@@ -17,7 +17,7 @@ for (var key in dataset) {
 
 // Gallery Object
 var gallery = {
-  Sommerfest1998 : [
+  Sommerfest_1998 : [
     "../assets/gallery/Sommerfest_1998/sf98001.jpg",
     "../assets/gallery/Sommerfest_1998/sf98002.jpg",
     "../assets/gallery/Sommerfest_1998/sf98003.jpg",
@@ -29,7 +29,7 @@ var gallery = {
     "../assets/gallery/Sommerfest_1998/sf98009.jpg",
     "../assets/gallery/Sommerfest_1998/sf98010.jpg",
   ],
-  Sommerfest1999 :[
+  Sommerfest_1999 :[
     "../assets/gallery/Sommerfest_1999/sf99001.jpg",
     "../assets/gallery/Sommerfest_1999/sf99002.jpg",
     "../assets/gallery/Sommerfest_1999/sf99003.jpg",
@@ -38,7 +38,7 @@ var gallery = {
     "../assets/gallery/Sommerfest_1999/sf99006.jpg",
     "../assets/gallery/Sommerfest_1999/sf99007.jpg",
   ],
-  Sommerfest2000 :[
+  Sommerfest_2000 :[
     "../assets/gallery/Sommerfest_2000/sf00001.jpg",
     "../assets/gallery/Sommerfest_2000/sf00002.jpg",
     "../assets/gallery/Sommerfest_2000/sf00003.jpg",
@@ -73,13 +73,10 @@ var gallery = {
       // referenced by key of array in Object
       var obj = gallery[key];
       // Sets up a link
-      $('#scrollmenu').append('<a link=#' + key + '>' + key + '</a>');
-
-
-
-
+      var title = key.replace('_', ' ');
+      $('#scrollmenu').append('<a link=#' + key + '>' + title + '</a>');
       // add image-container to gallery
-      $('#galleryContainer').append('<div class="image-container" id=' + key + '></div>');
+      $('#galleryContainer').append('<div class="image-container" id=' + key + '><h2>' + title + '</h2></div>');
       // add images to container
       for (var prop in obj) {
         if(!obj.hasOwnProperty(prop)) continue;
