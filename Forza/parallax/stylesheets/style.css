@@ -11,7 +11,7 @@ body, html {
 
 /* Create a Parallax Effect */
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,6 +42,16 @@ body, html {
   min-height: 400px;
 }
 
+.bgimg-4 {
+  background-image: url("../../assets/shop.jpg");
+  min-height: 400px;
+}
+
+.bgimg-5 {
+  background-image: url("../../assets/news2.jpg");
+  min-height: 400px;
+}
+
 .w3-wide {
   letter-spacing: 10px;
 }
@@ -57,13 +67,6 @@ body, html {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
   }
-}
-
-.gallery-image {
-  border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
-  padding: 5px; /* Some padding */
-  width: 150px; /* Set a small width */
 }
 
 .column {
@@ -86,7 +89,7 @@ body, html {
 
 div.scrollmenu {
     background-color: #333;
-    overflow: auto;
+    /*overflow: auto;*/
     white-space: nowrap;
 }
 
@@ -94,10 +97,40 @@ div.scrollmenu p {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px;
-    text-decoration: none;
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
 }
 
-div.scrollmenu a:hover {
-    background-color: #777;
+div.scrollmenu p.active {
+
+    background-color: #FAEE81;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: padding-left 0.5s ease-out;
+    transition: padding-right 0.5s ease-out;
+
 }
+
+div.scrollmenu p:hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+.image-holder {
+  height: 100px;
+  width: 180px;
+  overflow: hidden;
+  display: inline-block;
+}
+.image-container .image-holder {
+  margin: 8px;
+}
+
+.image-container{
+  text-align: center;
+}
+
+#shop
