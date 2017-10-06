@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>BVB Fanclub Forza Borussia 1996</title>
+<title id="title"></title>
 
 <head>
   <link rel="stylesheet" href="stylesheets/style.css" />
@@ -9,7 +9,7 @@
   <script src="scripts/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- <script src="data.js"></script> -->
+  <script src="data.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,28 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<script>
-$(document).ready(function(){
-  $('#portfolio #galeryContainer #galery').hide();
 
-  $('#portfolio #galeryContainer #galeryLink').click(function(){
-      $(this).next('#galery').slideToggle(200);
-  });
-});
-
-$(document).ready(function(){
-  $('#portfolio #galeryContainer #sf98').hide();
-  $('#portfolio #galeryContainer #sf99').hide();
-  var allNodes = document.getElementById("galeryContainer").childNodes;
-
-  $('#portfolio .scrollmenu p').click(function(){
-      var addressValue = $(this).attr("link");
-
-      $("#portfolio #galeryContainer").find(addressValue).slideToggle(200);
-
-  });
-});
-</script>
 
 <style>
 #flip:hover {
@@ -94,17 +73,16 @@ $(document).ready(function(){
 
     <div class="w3-row">
 
-
       <p><b>Wie alles begann</b></p><br>
 
-      <div class="w3-col m4">
-        <img src="../assets/aboutUs/bild1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      <div class="w3-col m4 image-holder" >
+        <img src="../assets/aboutUs/bild1.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" >
       </div>
-      <div class="w3-col m4">
-        <img src="../assets/aboutUs/bild2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      <div class="w3-col m4 image-holder" >
+        <img src="../assets/aboutUs/bild2.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" >
       </div>
-      <div class="w3-col m4">
-        <img src="../assets/aboutUs/bild3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      <div class="w3-col m4 image-holder" >
+        <img src="../assets/aboutUs/bild3.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" >
       </div>
 
 
@@ -117,40 +95,25 @@ $(document).ready(function(){
       </div> -->
     </div>
 
-    <!-- BARS -->
-
-    <!-- <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-    </div> -->
-
   </div>
 
 
-  <!-- THICK BAR -->
-  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">14+</span><br> Partners
+  <div class="bgimg-5 w3-display-container w3-opacity-min" id="news">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">News & Termine</span>
     </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">55+</span><br> Projects Done
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64" id="news">
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <h2>Fanclubnews</h2>
+        Weitere Termineinträge folgen in Kürze!
+      </div>
+
     </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">89+</span><br> Happy Clients
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">150+</span><br> Meetings
-    </div>
-  </div> -->
+  </div>
+
 
   <!-- Second Parallax Image with Portfolio Text -->
   <div class="bgimg-2 w3-display-container w3-opacity-min">
@@ -161,102 +124,19 @@ $(document).ready(function(){
 
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <p class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></p><br>
-
-    <div class="scrollmenu">
-      <p link="#sf98">Home</p>
-      <p link="#sf99">99</p>
-    </div>
-
-    <div id="galeryContainer">
-
-      <div id="sf98" >
-
-        <div class="w3-row-padding w3-center">
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-        </div>
-
-        <div class="w3-row-padding w3-center">
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-        </div>
-
-
-
-      </div>
-
-      <div id="sf99" >
-
-        <div class="w3-row-padding w3-center">
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-        </div>
-
-        <div class="w3-row-padding w3-center">
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98001.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98002.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-            <img src="../assets/galery/Sommerfest1998/sf98007.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-
-          <div class="w3-col m3">
-              <img src="../assets/galery/Sommerfest1998/sf98010.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity galery-image" >
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </div>
-
+    <div class="w3-center"><em>Hier sind die Bilder unserer Fahrten.<br> Klicke auf den Titel, um die Bilder anzuzeigen. <br>Klicke auf die Bilder, um diese zu vergrößern. </em></div>
   </div>
+
+  <div class="w3-padding-64">
+    <div class="scrollmenu w3-row w3-center w3-dark-grey w3-padding-16" id="scrollmenu">
+      <!-- Links generated automatically -->
+    </div>
+
+    <div id="galleryContainer">
+    <!-- gallery generated automatically -->
+    </div>
+  </div>
+
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -268,50 +148,211 @@ $(document).ready(function(){
   </div>
 
   <!-- Third Parallax Image with Portfolio Text -->
-  <div class="bgimg-3 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  <div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Kontakt</span>
     </div>
   </div>
 
   <!-- Container (Contact Section) -->
   <div class="w3-content w3-container w3-padding-64" id="contact">
-    <h3 class="w3-center">WHERE I WORK</h3>
-    <p class="w3-center"><em>I'd love your feedback!</em></p>
+    <p class="w3-center">
+      <em>Hier habt Ihr nun die Möglichkeit mit uns Kontakt aufzunehmen. Schreiben  Sie uns eine E-mail. Wir freuen uns über Lob, Kritik oder Anregungen zu unserer Webseite.</em>
+      <br />
+      <em>Mit freundlichen Grüßen</em>
+      <br />
+      <em>Der Vorstand</em>
+      <br />
+      <em>Stefan Petschak (1. Vorsitzender) - Martina Oberreich (2. Vorsitzende)</em>
+    </p>
 
-    <div class="w3-row w3-padding-32 w3-section">
-      <div class="w3-col m4 w3-container">
-        <!-- Add Google Maps -->
-        <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-      </div>
+    <div class="w3-center">
+      <h4>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+        <a href="mailto:info@forza-borussia.de">info@forza-borussia.de</a>
+      </h4>
+    </div>
+
       <div class="w3-col m8 w3-panel">
         <div class="w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+          <h2>Fanclubkonto</h2>
+          <i class="fa fa-university fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Volksbank Bönen eG<br>
+          <i class="fa fa-credit-card-alt fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Konto: 37 812 601<br>
+          <i class="fa fa-credit-card-alt fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> BLZ: 410 622 15<br>
+          <i class="fa fa-credit-card fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> IBAN: DE52 4106 2215 0037 8126 01<br>
         </div>
-        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-        </form>
+
       </div>
+
+  </div>
+
+  <!-- Fourth Parallax Image with Shop Text -->
+  <div class="bgimg-4 w3-display-container w3-opacity-min" id="shop">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Fanclub-Artikel</span>
     </div>
   </div>
 
+  <div class="w3-content w3-container w3-padding-64" id="shop">
+
+    <div class="w3-row-padding">
+
+      <div class="w3-third">
+        <div class="w3-card-4">
+          <img src="../assets/shop/Sekt1.jpg" alt="Sekt" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Jubiläumssekt </p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/polo1909.jpg" alt="Polo1909" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Polohemd 1909</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/polohemdws.jpg" alt="Polows" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Polohemd Westfahlenstadion</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/shirtbag.jpg" alt="Shirtbag" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt Ballspielverein</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/shirtbas.jpg" alt="Shirtbas" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt Ballspielverein</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/shirtws.jpg" alt="Shirtws" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt Westfahlenstadion</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w3-third">
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/jacke.jpg" alt="Jacke" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Jacke</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tuch.jpg" alt="Tuch" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Tuch</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/button.jpg" alt="Button" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Button</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/dose.jpg" alt="Prosecco" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Prosecco</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/glas1.jpg" alt="Glas" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Bierglas</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/numschigr.jpg" alt="Nummernschildverstärker" style="width:100%">
+          <div class="w3-container">
+            <p>Nummernschildverstärker</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w3-third">
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/schalgr.jpg" alt="Schal" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Schal</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tshirtgr.jpg" alt="TshirtGr" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tshirtdo.jpg" alt="TshirtDo" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tshirtsw.jpg" alt="TshirtSw" style="width:100%">
+          <div class="w3-container">
+            <p>Fanclub Shirt Rückseite</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tshirt2006_1.jpg" alt="Tshirt2006" style="width:100%">
+          <div class="w3-container">
+            <p>Jubiläums Shirt 2006</p>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <img src="../assets/shop/tshirt2006_2.jpg" alt="Tshirt2006" style="width:100%">
+          <div class="w3-container">
+            <p>Jubiläums Shirt 2006 Rückseite</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" >
+      <div class="w3-center">
+        <h4>Bei Interesse bitte kurze Mail an:<br><br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          <a href="mailto:info@forza-borussia.de">info@forza-borussia.de</a>
+        </h4>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Nach oben</a>
     <div class="w3-xlarge w3-section">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -320,7 +361,7 @@ $(document).ready(function(){
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p> Letzte Aktualisierung 06. Oktober 2017 <br /><i class="fa fa-copyright"></i> 2002 by Stefan Petschak & Tim Apostel</p>
   </footer>
 
 </body>
