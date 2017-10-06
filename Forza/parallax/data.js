@@ -50,6 +50,7 @@ var gallery = {
     "../assets/gallery/Sommerfest_2000/sf00009.jpg",
     "../assets/gallery/Sommerfest_2000/sf00010.jpg",
   ],
+
 };
 
 // ---------------------------------------------------------------------
@@ -72,7 +73,11 @@ var gallery = {
       // referenced by key of array in Object
       var obj = gallery[key];
       // Sets up a link
-      $('#scrollmenu').append('<p class="w3-quarter w3-section" link=#' + key + '>' + key + '</p>');
+      $('#scrollmenu').append('<a link=#' + key + '>' + key + '</a>');
+
+
+
+
       // add image-container to gallery
       $('#galleryContainer').append('<div class="image-container" id=' + key + '></div>');
       // add images to container
@@ -87,7 +92,7 @@ var gallery = {
     // ---------------------------------------------------------------------
     // The onClick Event in the scrollbar
     // ---------------------------------------------------------------------
-    $('.scrollmenu p').click(function(){
+    $('.scrollmenu a').click(function(){
       // indicator for open gallery
       $(this).toggleClass('active');
       // opening perviosly hidden container
