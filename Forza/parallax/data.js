@@ -20,7 +20,7 @@ var gallery = {
   Sommerfest_1998: 10,
   Sommerfest_1999: 7,
   Sommerfest_2000: 10,
-  Sommerfest_2011: 27,
+  Sommerfest_2011: 26,
 
 };
 
@@ -53,6 +53,7 @@ var gallery = {
       for (var i = 1; i<= imageCount; i++) {
         $('#' + key).append('<div class="image-holder"><img src="../assets/gallery/' + key + '/' + i + '.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity gallery-image" ></div>');
       }
+      $('#' + key).append('<hr>');
       // hide the newly build container
       $('#' + key).hide();
     }
