@@ -51,7 +51,7 @@ var gallery = {
       $('#galleryContainer').append('<div class="image-container" id=' + key + '><h2>' + title + '</h2></div>');
       // add images to container
       for (var i = 1; i<= imageCount; i++) {
-        $('#' + key).append('<div class="image-holder"><img src="../assets/gallery/' + key + '/' + i + '.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity gallery-image" ></div>');
+        $('#' + key).append('<div class="image-holder"><img src="../assets/gallery/' + key + '/' + i + '.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" ></div>');
       }
       $('#' + key).append('<hr>');
       // hide the newly build container
